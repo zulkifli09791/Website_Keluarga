@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Website Keluarga</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    header {
+      background: #3b5998;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .profile-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .profile {
+      background: white;
+      border-radius: 10px;
+      padding: 10px;
+      width: 160px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .profile img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 250px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+
+    
+    .book-cover {
+      width: 300px;
+      height: 400px;
+      margin: 40px auto;
+      background: sienna;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    
+    .book-cover:hover {
+      transform: scale(1.05);
+    }
+    
+    .cover-text {
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Website Keluarga Sumur</h1>
+</header>
+
+<section>
+  <h2>Profil Keluarga</h2>
+  <div class="profile-container">
+    <!-- Ganti gambar dan nama sesuai anggota -->
+    <div class="profile">
+      <img src="Ambo.jpg" alt="Sultan">
+      <p>Sultan</p>
+    </div>
+    
+    <div class="profile">
+      <img src="Mom.jpg" alt="Murni">
+      <p>Murni</p>
+    </div>
+    
+    <div class="profile">
+      <img src="Utti.jpg" alt="Multiani">
+      <p>Multiani</p>
+    </div>
+    
+    <div class="profile">
+      <img src="Sabe.jpg" alt="Sabriani">
+      <p>Sabriani</p>
+    </div>
+    
+    <div class="profile">
+      <img src="Zul.jpg" alt="Zulkifli">
+      <p>Zulkifli</p>
+    </div>
+    
+    <div class="profile">
+      <img src="Fiki.jpg" alt="Zufiqri">
+      <p>Zulfiqri</p>
+    </div>
+    
+    
+    <!-- Tambah hingga 8 anggota -->
+  </div>
+
+  <h2>Foto Bersama</h2>
+  <div class="gallery">
+    <img src="Jpg1.jpg" alt="Foto 1">
+    <img src="Jpg2.jpg" alt="Foto 2">
+  </div>
+
+
+<section class="book-cover" onclick="window.location.href='Buku.html'">
+  <div class="cover-text">Buku Kenangan Keluarga</div>
+</section>
+
+<script>
+  let currentPage = 0;
+  const pages = document.querySelectorAll(".page");
+
+  function flipNext() {
+    if (currentPage < pages.length) {
+      pages[currentPage].classList.add("flipped");
+      currentPage++;
+    }
+  }
+
+  function flipPrev() {
+    if (currentPage > 0) {
+      currentPage--;
+      pages[currentPage].classList.remove("flipped");
+    }
+  }
+</script>
+
+</body>
+</html>
